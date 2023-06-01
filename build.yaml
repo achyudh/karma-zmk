@@ -14,6 +14,6 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: microdox_left
+    shield: karma_left
   - board: seeeduino_xiao_ble
-    shield: microdox_right
+    shield: karma_right

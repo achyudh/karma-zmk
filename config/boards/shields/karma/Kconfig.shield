@@ -1,0 +1,8 @@
+# Copyright (c) 2023 Achyudh Ram
+# SPDX-License-Identifier: MIT
+
+config SHIELD_KARMA_LEFT
+    def_bool $(shields_list_contains,karma_left)
+
+config SHIELD_KARMA_RIGHT
+    def_bool $(shields_list_contains,karma_right)

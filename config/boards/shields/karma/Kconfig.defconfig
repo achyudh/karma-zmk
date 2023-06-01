@@ -1,0 +1,19 @@
+# Copyright (c) 2023 Achyudh Ram
+# SPDX-License-Identifier: MIT
+
+if SHIELD_KARMA_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Karma"
+    
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_KARMA_LEFT || SHIELD_KARMA_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif

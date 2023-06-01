@@ -1,0 +1,11 @@
+file_format: "1"
+id: karma
+name: Karma
+type: shield
+url: https://github.com/achyudh/karma
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
+siblings:
+  - karma_left
+  - karma_right
