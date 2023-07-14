@@ -6,9 +6,9 @@
 
 #define ABC 0
 #define NUM 1
-#define FUN 2
-#define NAV 3
-#define SYM 4
+#define SYM 2
+#define FUN 3
+#define NAV 4
 #define MED 5
 #define OPR 6
 
