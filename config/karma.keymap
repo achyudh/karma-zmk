@@ -108,14 +108,14 @@
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
                     // ┃           ┃     F4    ┃     F5    ┃     F6    ┃    F11    ┃   ┃           ┃   RSHFT   ┃   RCTRL   ┃    RALT   ┃    RGUI   ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
-                    // ┃           ┃     F1    ┃     F2    ┃     F3    ┃    F10    ┃   ┃           ┃           ┃           ┃           ┃           ┃
+                    // ┃           ┃     F1    ┃     F2    ┃     F3    ┃    F10    ┃   ┃           ┃           ┃           ┃    RST    ┃   BTDLR   ┃
                     // ┗━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┛
                     //                         ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
                         &none       &kp F7      &kp F8      &kp F9      &kp F12        &none       &none       &none       &none       &none
                         &none       &kp F4      &kp F5      &kp F6      &kp F11        &none       &kp RSHFT   &kp RCTRL   &kp RALT    &kp RGUI
-                        &none       &kp F1      &kp F2      &kp F3      &kp F10        &none       &none       &none       &none       &none      
+                        &none       &kp F1      &kp F2      &kp F3      &kp F10        &none       &none       &none       &sys_reset  &bootloader
                                                 &none       &none       &none          &none       &none       &none
                     >;
                 };
@@ -165,14 +165,14 @@
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
                     // ┃   LGUI    ┃   LALT    ┃   LCTRL   ┃   LSHFT   ┃           ┃   ┃    BT1    ┃    BT2    ┃    BT3    ┃    BT4    ┃    BT5    ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
-                    // ┃           ┃           ┃           ┃           ┃           ┃   ┃  BT CLR   ┃           ┃           ┃    RST    ┃   BTLDR   ┃
+                    // ┃   BTDLR   ┃    RST    ┃           ┃           ┃           ┃   ┃  BT CLR   ┃           ┃           ┃           ┃           ┃
                     // ┗━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┛
                     //                         ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
                         &none       &none       &none       &none       &none           &none        &none        &none        &none        &none                  
                         &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none           &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5       
-                        &none       &none       &none       &none       &none           &bt BT_CLR   &none        &none        &sys_reset   &bootloader
+                        &bootloader &sys_reset  &none       &none       &none           &bt BT_CLR   &none        &none        &none        &none
                                                 &none       &none       &none           &none        &none        &none               
                     >;
                 };
