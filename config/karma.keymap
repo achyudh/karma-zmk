@@ -19,6 +19,10 @@
   tapping-term-ms = <200>;
 };
 
+&caps_word {
+  continue-list = <UNDERSCORE MINUS>;
+};
+
 / {
     combos {
             compatible = "zmk,combos";
@@ -133,7 +137,7 @@
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
                         &none       &none       &none       &none       &none           &kp K_UNDO   &kp K_CUT   &kp K_COPY  &kp K_PASTE &kp K_REDO
-                        &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none           &kp CAPS     &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
+                        &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none           &caps_word   &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
                         &none       &none       &none       &none       &none           &kp INS      &kp HOME    &kp PG_DN   &kp PG_UP   &kp END      
                                                 &none       &none       &none           &none        &none       &none
                     >;
