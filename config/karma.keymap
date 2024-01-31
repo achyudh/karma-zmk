@@ -70,38 +70,38 @@
                 num_layer {
                     label= "NUM";
                     // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-                    // ┃     `     ┃     7     ┃     8     ┃     9     ┃     \     ┃   ┃           ┃           ┃           ┃           ┃           ┃
+                    // ┃     (     ┃     7     ┃     8     ┃     9     ┃     )     ┃   ┃           ┃           ┃           ┃           ┃           ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
                     // ┃     [     ┃     4     ┃     5     ┃     6     ┃     ]     ┃   ┃           ┃   RSHFT   ┃   RCTRL   ┃    RALT   ┃    RGUI   ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
-                    // ┃     '     ┃     1     ┃     2     ┃     3     ┃     =     ┃   ┃           ┃           ┃           ┃           ┃           ┃
+                    // ┃     `     ┃     1     ┃     2     ┃     3     ┃     =     ┃   ┃           ┃           ┃           ┃           ┃           ┃
                     // ┗━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┛
-                    //                         ┃     .     ┃     0     ┃     -     ┃   ┃           ┃           ┃           ┃
+                    //                         ┃     '     ┃     0     ┃     -     ┃   ┃           ┃           ┃           ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
-                        &kp GRAVE    &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp BSLH       &none       &none       &none       &none       &none 
+                        &kp LPAR     &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp RPAR       &none       &none       &none       &none       &none 
                         &kp LBKT     &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp RBKT       &none       &kp RSHFT   &kp RCTRL   &kp RALT    &kp RGUI
-                        &kp APOS     &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp EQUAL      &none       &none       &none       &none       &none
-                                                 &kp PERIOD  &kp KP_N0   &kp MINUS      &none       &none       &none 
+                        &kp GRAVE    &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp EQUAL      &none       &none       &none       &none       &none
+                                                 &kp SQT     &kp KP_N0   &kp MINUS      &none       &none       &none 
                     >;
                 };
 
                 sym_layer {
                     label= "SYM";
                     // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-                    // ┃     ~     ┃     &     ┃     *     ┃     (     ┃     |     ┃   ┃           ┃           ┃           ┃           ┃           ┃
+                    // ┃     |     ┃     &     ┃     *     ┃     (     ┃     \     ┃   ┃           ┃           ┃           ┃           ┃           ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
                     // ┃     {     ┃     $     ┃     %     ┃     ^     ┃     }     ┃   ┃           ┃   RSHFT   ┃   RCTRL   ┃    RALT   ┃    RGUI   ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
-                    // ┃     "     ┃     !     ┃     @     ┃     #     ┃     +     ┃   ┃           ┃           ┃           ┃           ┃           ┃
+                    // ┃     ~     ┃     !     ┃     @     ┃     #     ┃     +     ┃   ┃           ┃           ┃           ┃           ┃           ┃
                     // ┗━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┛
-                    //                         ┃     (     ┃     )     ┃     _     ┃   ┃           ┃           ┃           ┃
+                    //                         ┃     "     ┃     )     ┃     _     ┃   ┃           ┃           ┃           ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
-                        &kp TILDE   &kp AMPS    &kp ASTRK   &kp LPAR    &kp PIPE        &none       &none       &none       &none       &none
+                        &kp PIPE    &kp AMPS    &kp ASTRK   &kp LPAR    &kp BSLH        &none       &none       &none       &none       &none
                         &kp LBRC    &kp DLLR    &kp PRCNT   &kp CARET   &kp RBRC        &none       &kp RSHFT   &kp RCTRL   &kp RALT    &kp RGUI
-                        &kp DQT     &kp EXCL    &kp AT      &kp HASH    &kp PLUS        &none       &none       &none       &none       &none
-                                                &kp LPAR    &kp RPAR    &kp UNDER       &none       &none       &none
+                        &kp TILDE   &kp EXCL    &kp AT      &kp HASH    &kp PLUS        &none       &none       &none       &none       &none
+                                                &kp DQT     &kp RPAR    &kp UNDER       &none       &none       &none
                     >;
                 };
 
