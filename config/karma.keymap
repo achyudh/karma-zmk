@@ -89,7 +89,7 @@
                 sym_layer {
                     label= "SYM";
                     // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-                    // ┃     |     ┃     &     ┃     *     ┃     (     ┃     \     ┃   ┃           ┃           ┃           ┃           ┃           ┃
+                    // ┃     |     ┃     &     ┃     *     ┃     ;     ┃     \     ┃   ┃           ┃           ┃           ┃           ┃           ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
                     // ┃     {     ┃     $     ┃     %     ┃     ^     ┃     }     ┃   ┃           ┃   RSHFT   ┃   RCTRL   ┃    RALT   ┃    RGUI   ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
@@ -98,7 +98,7 @@
                     //                         ┃     "     ┃     :     ┃     _     ┃   ┃           ┃           ┃           ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
-                        &kp PIPE    &kp AMPS    &kp ASTRK   &kp LPAR    &kp BSLH        &none       &none       &none       &none       &none
+                        &kp PIPE    &kp AMPS    &kp ASTRK   &kp SEMI    &kp BSLH        &none       &none       &none       &none       &none
                         &kp LBRC    &kp DLLR    &kp PRCNT   &kp CARET   &kp RBRC        &none       &kp RSHFT   &kp RCTRL   &kp RALT    &kp RGUI
                         &kp TILDE   &kp EXCL    &kp AT      &kp HASH    &kp PLUS        &none       &none       &none       &none       &none
                                                 &kp DQT     &kp COLON   &kp UNDER       &none       &none       &none
