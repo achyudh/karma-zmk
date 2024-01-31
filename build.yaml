@@ -17,3 +17,5 @@ include:
     shield: karma_left
   - board: seeeduino_xiao_ble
     shield: karma_right
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
