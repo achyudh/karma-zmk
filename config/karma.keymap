@@ -23,7 +23,7 @@
   continue-list = <UNDERSCORE MINUS>;
 };
 
-/ {t
+/ {
     combos {
             compatible = "zmk,combos";
             combo_esc {
