@@ -169,14 +169,14 @@
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
                     // ┃   LGUI    ┃   LALT    ┃   LCTRL   ┃   LSHFT   ┃           ┃   ┃    BT1    ┃    BT2    ┃    BT3    ┃    BT4    ┃    BT5    ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
-                    // ┃   BTDLR   ┃    RST    ┃           ┃           ┃           ┃   ┃  BT CLR   ┃           ┃           ┃           ┃           ┃
+                    // ┃   BTDLR   ┃    RST    ┃           ┃           ┃           ┃   ┃  BT CLR   ┃ BT CLRALL ┃           ┃           ┃           ┃
                     // ┗━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┛
                     //                         ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
                         &none       &none       &none       &none       &none           &none        &none        &none        &none        &none                  
                         &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none           &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5       
-                        &bootloader &sys_reset  &none       &none       &none           &bt BT_CLR   &none        &none        &none        &none
+                        &bootloader &sys_reset  &none       &none       &none           &bt BT_CLR   &bt BT_CLR_ALL &none       &none        &none
                                                 &none       &none       &none           &none        &none        &none               
                     >;
                 };
