@@ -132,13 +132,13 @@
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
                     // ┃           ┃           ┃           ┃           ┃           ┃   ┃    INS    ┃    HOME   ┃   PG_DN   ┃   PG_UP   ┃    END    ┃
                     // ┗━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┛
-                    //                         ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
+                    //                         ┃           ┃           ┃           ┃   ┃    DEL    ┃   ENTER   ┃    BSPC   ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
                         &none       &none       &none       &none       &none           &kp K_UNDO   &kp K_CUT   &kp K_COPY  &kp K_PASTE &kp K_REDO
                         &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none           &caps_word   &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
                         &none       &none       &none       &none       &none           &kp INS      &kp HOME    &kp PG_DN   &kp PG_UP   &kp END      
-                                                &none       &none       &none           &none        &none       &none
+                                                &none       &none       &none           &kp DEL      &kp RET     &kp BSPC
                     >;
                 };
 
