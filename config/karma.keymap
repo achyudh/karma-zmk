@@ -145,7 +145,7 @@
                 med_layer {
                     label= "MED";
                     // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-                    // ┃           ┃           ┃           ┃           ┃           ┃   ┃   BR MIN  ┃   BR DN   ┃           ┃   BR UP   ┃   BR MAX  ┃
+                    // ┃           ┃           ┃           ┃           ┃           ┃   ┃   BR MIN  ┃   BR DN   ┃   PSCRN   ┃   BR UP   ┃   BR MAX  ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
                     // ┃   LGUI    ┃   LALT    ┃   LCTRL   ┃   LSHFT   ┃           ┃   ┃     RW    ┃    PREV   ┃    P/P    ┃    NEXT   ┃     FF    ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
@@ -154,9 +154,9 @@
                     //                         ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
-                        &none       &none       &none       &none       &none           &kp C_BRI_MIN &kp C_BRI_DN &none    &kp C_BRI_UP &kp C_BRI_MAX       
-                        &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none           &kp C_RW    &kp C_PREV   &kp C_PP   &kp C_NEXT   &kp C_FF 
-                        &none       &none       &none       &none       &none           &none       &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &none      
+                        &none       &none       &none       &none       &none           &kp C_BRI_MIN &kp C_BRI_DN &kp PSCRN &kp C_BRI_UP &kp C_BRI_MAX       
+                        &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none           &kp C_RW    &kp C_PREV   &kp C_PP    &kp C_NEXT   &kp C_FF 
+                        &none       &none       &none       &none       &none           &none       &kp C_VOL_DN &kp C_MUTE  &kp C_VOL_UP &none      
                                                 &none       &none       &none           &none       &none       &none
                     >;
                 };
