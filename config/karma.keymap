@@ -50,7 +50,7 @@
                 abc_layer {
                     label= "ABC";
                     // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-                    // ┃     Q     ┃     W     ┃     F     ┃     P     ┃     B     ┃   ┃     J     ┃     L     ┃     U     ┃     Y     ┃     ;     ┃
+                    // ┃     Q     ┃     W     ┃     F     ┃     P     ┃     B     ┃   ┃     J     ┃     L     ┃     U     ┃     Y     ┃     \     ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
                     // ┃     A     ┃     R     ┃     S     ┃     T     ┃     G     ┃   ┃     M     ┃     N     ┃     E     ┃     I     ┃     O     ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
@@ -59,7 +59,7 @@
                     //                         ┃    ESC    ┃    SPC    ┃    TAB    ┃   ┃    DEL    ┃   ENTER   ┃    BSPC   ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
-                        &kp Q       &kp W       &kp F       &kp P         &kp B         &kp J       &kp L       &kp U       &kp Y       &kp SEMI
+                        &kp Q       &kp W       &kp F       &kp P         &kp B         &kp J       &kp L       &kp U       &kp Y       &kp BSLH
                         &mt LGUI A  &mt LALT R  &mt LCTRL S &mt LSHFT T   &kp G         &kp M       &mt RSHFT N &mt RCTRL E &mt RALT I  &mt RGUI O
                         &kp Z       &kp X       &kp C       &kp D         &kp V         &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH
                                                 &lt MED ESC &lt NAV SPACE &lt OPR TAB   &lt FUN DEL &lt NUM RET &lt SYM BSPC
@@ -92,14 +92,14 @@
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
                     // ┃     {     ┃     $     ┃     %     ┃     ^     ┃     }     ┃   ┃           ┃   RSHFT   ┃   RCTRL   ┃    RALT   ┃    RGUI   ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
-                    // ┃     |     ┃     !     ┃     @     ┃     #     ┃     \     ┃   ┃           ┃           ┃           ┃           ┃           ┃
+                    // ┃     <     ┃     !     ┃     @     ┃     #     ┃     >     ┃   ┃           ┃           ┃           ┃           ┃           ┃
                     // ┗━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┛
                     //                         ┃     "     ┃     :     ┃     _     ┃   ┃           ┃           ┃           ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
                         &kp TILDE   &kp AMPS    &kp ASTRK   &kp SEMI    &kp PLUS        &none       &none       &none       &none       &none
                         &kp LBRC    &kp DLLR    &kp PRCNT   &kp CARET   &kp RBRC        &none       &kp RSHFT   &kp RCTRL   &kp RALT    &kp RGUI
-                        &kp PIPE    &kp EXCL    &kp AT      &kp HASH    &kp BSLH        &none       &none       &none       &none       &none
+                        &kp LT      &kp EXCL    &kp AT      &kp HASH    &kp GT          &none       &none       &none       &none       &none
                                                 &kp DQT     &kp COLON   &kp UNDER       &none       &none       &none
                     >;
                 };
