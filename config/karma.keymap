@@ -126,7 +126,7 @@
                 nav_layer {
                     label= "NAV";
                     // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-                    // ┃           ┃           ┃           ┃           ┃           ┃   ┃    REDO   ┃   PASTE   ┃    UNDO   ┃   COPY    ┃    CUT    ┃
+                    // ┃           ┃           ┃           ┃           ┃           ┃   ┃    REDO   ┃    CUT    ┃    COPY   ┃   PASTE   ┃    UNDO   ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
                     // ┃   LGUI    ┃   LALT    ┃   LCTRL   ┃   LSHFT   ┃           ┃   ┃    CAPS   ┃    LEFT   ┃    DOWN   ┃    UP     ┃   RIGHT   ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
@@ -135,7 +135,7 @@
                     //                         ┃           ┃           ┃           ┃   ┃    DEL    ┃   ENTER   ┃    BSPC   ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
-                        &none       &none       &none       &none       &none           &kp K_REDO   &kp K_PASTE &kp K_UNDO  &kp K_COPY  &kp K_CUT
+                        &none       &none       &none       &none       &none           &kp K_REDO   &kp K_CUT   &kp K_COPY  &kp K_PASTE &kp K_UNDO
                         &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none           &caps_word   &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
                         &none       &none       &none       &none       &none           &kp INS      &kp END     &kp PG_DN   &kp PG_UP   &kp HOME      
                                                 &none       &none       &none           &kp DEL      &kp RET     &kp BSPC
