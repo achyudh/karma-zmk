@@ -32,19 +32,6 @@
             };
     };
 
-    macros {
-        gif: gif {
-            label = "giphy";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp N2>
-                , <&macro_release &kp LSHFT>
-                , <&macro_tap &kp G &kp I &kp F>;
-        };
-    };
-
         keymap {
                 compatible = "zmk,keymap";
                 abc_layer {
@@ -54,7 +41,7 @@
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
                     // ┃     A     ┃     R     ┃     S     ┃     T     ┃     G     ┃   ┃     M     ┃     N     ┃     E     ┃     I     ┃     O     ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
-                    // ┃     Z     ┃     X     ┃     C     ┃     D     ┃     V     ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃     /     ┃ 
+                    // ┃     Z     ┃     X     ┃     C     ┃     D     ┃     V     ┃   ┃     K     ┃     H     ┃     ,     ┃     .     ┃     /     ┃
                     // ┗━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┛
                     //                         ┃    ESC    ┃    SPC    ┃    TAB    ┃   ┃    DEL    ┃   ENTER   ┃    BSPC   ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -78,10 +65,10 @@
                     //                         ┃     '     ┃     0     ┃     -     ┃   ┃           ┃           ┃           ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
-                        &kp GRAVE    &kp N7      &kp N8      &kp N9      &kp EQUAL      &none       &none       &none       &none       &none 
+                        &kp GRAVE    &kp N7      &kp N8      &kp N9      &kp EQUAL      &none       &none       &none       &none       &none
                         &kp LPAR     &kp N4      &kp N5      &kp N6      &kp RPAR       &none       &kp RSHFT   &kp RCTRL   &kp RALT    &kp RGUI
                         &kp LBKT     &kp N1      &kp N2      &kp N3      &kp RBKT       &none       &none       &none       &none       &none
-                                                 &kp SQT     &kp N0      &kp MINUS      &none       &none       &none 
+                                                 &kp SQT     &kp N0      &kp MINUS      &none       &none       &none
                     >;
                 };
 
@@ -137,7 +124,7 @@
                     bindings = <
                         &none       &none       &none       &none       &none           &kp K_REDO   &kp K_CUT   &kp K_COPY  &kp K_PASTE &kp K_UNDO
                         &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none           &caps_word   &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT
-                        &none       &none       &none       &none       &none           &kp INS      &kp END     &kp PG_DN   &kp PG_UP   &kp HOME      
+                        &none       &none       &none       &none       &none           &kp INS      &kp END     &kp PG_DN   &kp PG_UP   &kp HOME
                                                 &none       &none       &none           &kp DEL      &kp RET     &kp BSPC
                     >;
                 };
@@ -154,9 +141,9 @@
                     //                         ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
-                        &none       &none       &none       &none       &none           &kp C_BRI_MIN &kp C_BRI_DN &kp PSCRN &kp C_BRI_UP &kp C_BRI_MAX       
-                        &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none           &kp C_RW    &kp C_PREV   &kp C_PP    &kp C_NEXT   &kp C_FF 
-                        &none       &none       &none       &none       &none           &none       &kp C_VOL_DN &kp C_MUTE  &kp C_VOL_UP &none      
+                        &none       &none       &none       &none       &none           &kp C_BRI_MIN &kp C_BRI_DN &kp PSCRN &kp C_BRI_UP &kp C_BRI_MAX
+                        &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none           &kp C_RW    &kp C_PREV   &kp C_PP    &kp C_NEXT   &kp C_FF
+                        &none       &none       &none       &none       &none           &none       &kp C_VOL_DN &kp C_MUTE  &kp C_VOL_UP &none
                                                 &none       &none       &none           &none       &none       &none
                     >;
                 };
@@ -173,10 +160,10 @@
                     //                         ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
-                        &none       &none       &none       &none       &none           &none        &none        &none        &none        &none                  
-                        &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none           &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5       
+                        &none       &none       &none       &none       &none           &none        &none        &none        &none        &none
+                        &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none           &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5
                         &bootloader &sys_reset  &none       &none       &none           &bt BT_CLR   &bt BT_CLR_ALL &none       &none        &none
-                                                &none       &none       &none           &none        &none        &none               
+                                                &none       &none       &none           &none        &none        &none
                     >;
                 };
         };
