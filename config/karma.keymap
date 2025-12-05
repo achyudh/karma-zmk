@@ -23,6 +23,21 @@
 };
 
 / {
+    behaviors {
+        n0_colon: n0_colon {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N0>, <&kp COLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        n9_semi: n9_semi {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N9>, <&kp SEMI>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+
     combos {
             compatible = "zmk,combos";
             combo_esc {
@@ -65,10 +80,10 @@
                     //                         ┃     '     ┃     0     ┃     -     ┃   ┃           ┃           ┃           ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
-                        &kp GRAVE    &kp N7      &kp N8      &kp N9      &kp EQUAL      &none       &none       &none       &none       &none
+                        &kp GRAVE    &kp N7      &kp N8      &n9_semi    &kp EQUAL      &none       &none       &none       &none       &none
                         &kp LPAR     &kp N4      &kp N5      &kp N6      &kp RPAR       &none       &kp RSHFT   &kp RCTRL   &kp RALT    &kp RGUI
                         &kp LBKT     &kp N1      &kp N2      &kp N3      &kp RBKT       &none       &none       &none       &none       &none
-                                                 &kp SQT     &kp N0      &kp MINUS      &none       &none       &none
+                                                 &kp SQT     &n0_colon   &kp MINUS      &none       &none       &none
                     >;
                 };
 
