@@ -35,19 +35,19 @@
             bindings = <&kp N9>, <&kp GRAVE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        brace: brace_morph {
+        sym_brc: sym_brc_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LBRC>, <&kp RBRC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        paren: paren_morph {
+        sym_par: sym_par_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LPAR>, <&kp RPAR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        bracket: bracket_morph {
+        sym_bkt: sym_bkt_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LBKT>, <&kp RBKT>;
@@ -107,19 +107,19 @@
                 sym_layer {
                     label= "SYM";
                     // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-                    // ┃     {     ┃     &     ┃     *     ┃     `     ┃     =     ┃   ┃           ┃           ┃           ┃           ┃           ┃
+                    // ┃     `     ┃     &     ┃     *     ┃     $     ┃     ^     ┃   ┃           ┃           ┃           ┃           ┃           ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-                    // ┃     (     ┃     $     ┃     %     ┃     ^     ┃     \     ┃   ┃           ┃   RSHFT   ┃   RCTRL   ┃    RALT   ┃    RGUI   ┃
+                    // ┃     (     ┃     {     ┃     [     ┃     '     ┃     =     ┃   ┃           ┃   RSHFT   ┃   RCTRL   ┃    RALT   ┃    RGUI   ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
-                    // ┃     [     ┃     !     ┃     @     ┃     #     ┃     _     ┃   ┃           ┃           ┃           ┃           ┃           ┃
+                    // ┃     \     ┃     !     ┃     @     ┃     #     ┃     %     ┃   ┃           ┃           ┃           ┃           ┃           ┃
                     // ┗━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┛
-                    //                         ┃           ┃     '     ┃     -     ┃   ┃           ┃           ┃           ┃
+                    //                         ┃           ┃     -     ┃     _     ┃   ┃           ┃           ┃           ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
-                        &brace      &kp AMPS    &kp ASTRK   &kp GRAVE   &kp EQUAL       &none       &none       &none       &none       &none
-                        &paren      &kp DLLR    &kp PRCNT   &kp CARET   &kp BSLH        &none       &kp RSHFT   &kp RCTRL   &kp RALT    &kp RGUI
-                        &bracket    &kp EXCL    &kp AT      &kp HASH    &kp UNDER       &none       &none       &none       &none       &none
-                                                &none       &kp SQT     &kp MINUS       &none       &none       &none
+                        &kp GRAVE   &kp AMPS    &kp STAR    &kp DLLR    &kp CARET       &none       &none       &none       &none       &none
+                        &sym_par    &sym_brc    &sym_bkt    &kp SQT     &kp EQUAL       &none       &kp RSHFT   &kp RCTRL   &kp RALT    &kp RGUI
+                        &kp BSLH    &kp EXCL    &kp AT      &kp HASH    &kp PRCNT       &none       &none       &none       &none       &none
+                                                &none       &kp MINUS   &kp UNDER       &none       &none       &none
                     >;
                 };
 
