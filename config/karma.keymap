@@ -23,16 +23,16 @@
 
 / {
     behaviors {
-        n0_sqt: n0_sqt {
+        num_plus: num_plus_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N0>, <&kp SQT>;
+            bindings = <&kp PLUS>, <&kp CARET>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-        n9_grave: n9_grave {
+        num_star: num_star_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N9>, <&kp GRAVE>;
+            bindings = <&kp STAR>, <&kp FSLH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         sym_brc: sym_brc_morph {
@@ -88,19 +88,19 @@
                 num_layer {
                     label= "NUM";
                     // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-                    // ┃    ESC    ┃     7     ┃     8     ┃     9     ┃    INS    ┃   ┃           ┃           ┃           ┃  SYS RST  ┃  BOOTLDR  ┃
+                    // ┃    ESC    ┃     7     ┃     8     ┃     9     ┃    + ^    ┃   ┃           ┃           ┃           ┃  SYS RST  ┃  BOOTLDR  ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-                    // ┃   CAPSW   ┃     4     ┃     5     ┃     6     ┃    DEL    ┃   ┃           ┃   RSHFT   ┃   RCTRL   ┃    RALT   ┃    RGUI   ┃
+                    // ┃   CAPSW   ┃     4     ┃     5     ┃     6     ┃    - _    ┃   ┃           ┃   RSHFT   ┃   RCTRL   ┃    RALT   ┃    RGUI   ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
-                    // ┃   CAPSL   ┃     1     ┃     2     ┃     3     ┃           ┃   ┃           ┃           ┃           ┃           ┃           ┃
+                    // ┃    DEL    ┃     1     ┃     2     ┃     3     ┃    * /    ┃   ┃           ┃           ┃           ┃           ┃           ┃
                     // ┗━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┛
-                    //                         ┃           ┃     0     ┃           ┃   ┃           ┃           ┃           ┃
+                    //                         ┃           ┃     0     ┃    SPC    ┃   ┃           ┃           ┃           ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
-                        &kp ESC      &kp N7      &kp N8      &n9_grave   &kp INS        &none       &none       &none       &sys_reset  &bootloader
-                        &caps_word   &kp N4      &kp N5      &kp N6      &kp DEL        &none       &kp RSHFT   &kp RCTRL   &kp RALT    &kp RGUI
-                        &kp CAPS     &kp N1      &kp N2      &kp N3      &none          &none       &none       &none       &none       &none
-                                                 &none       &n0_sqt     &none          &none       &none       &none
+                        &kp ESC      &kp N7      &kp N8      &kp N9      &num_plus      &none       &none       &none       &sys_reset  &bootloader
+                        &caps_word   &kp N4      &kp N5      &kp N6      &kp MINUS      &none       &kp RSHFT   &kp RCTRL   &kp RALT    &kp RGUI
+                        &kp DEL      &kp N1      &kp N2      &kp N3      &num_star      &none       &none       &none       &none       &none
+                                                 &none       &kp N0      &kp SPACE      &none       &none       &none
                     >;
                 };
 
