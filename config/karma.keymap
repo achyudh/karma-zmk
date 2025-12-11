@@ -164,18 +164,18 @@
                 med_layer {
                     label= "MED";
                     // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-                    // ┃  BOOTLDR  ┃  SYS RST  ┃           ┃           ┃           ┃   ┃   BR MIN  ┃   BR DN   ┃   PSCRN   ┃   BR UP   ┃   BR MAX  ┃
+                    // ┃  BOOTLDR  ┃  SYS RST  ┃           ┃  BT CLR   ┃ BT CLRALL ┃   ┃   BR MIN  ┃   BR DN   ┃   PSCRN   ┃   BR UP   ┃   BR MAX  ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
                     // ┃    BT0    ┃    BT1    ┃    BT2    ┃    BT3    ┃    BT4    ┃   ┃     RW    ┃    PREV   ┃    P/P    ┃    NEXT   ┃     FF    ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
-                    // ┃  BT CLR   ┃ BT CLRALL ┃           ┃           ┃           ┃   ┃           ┃   VOL DN  ┃    MUTE   ┃   VOL UP  ┃           ┃
+                    // ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃   VOL DN  ┃    MUTE   ┃   VOL UP  ┃           ┃
                     // ┗━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┛
                     //                         ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
-                        &bootloader  &sys_reset   &none        &none        &none        &kp C_BRI_MIN &kp C_BRI_DN &kp PSCRN  &kp C_BRI_UP &kp C_BRI_MAX
+                        &bootloader  &sys_reset   &none        &bt BT_CLR &bt BT_CLR_ALL &kp C_BRI_MIN &kp C_BRI_DN &kp PSCRN  &kp C_BRI_UP &kp C_BRI_MAX
                         &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp C_RW      &kp C_PREV   &kp C_PP   &kp C_NEXT   &kp C_FF
-                        &bt BT_CLR &bt BT_CLR_ALL &none        &none        &none        &none         &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &none
+                        &none        &none        &none        &none        &none        &none         &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &none
                                                   &none        &none        &none        &none         &none        &none
                     >;
                 };
