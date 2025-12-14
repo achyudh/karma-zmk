@@ -1,0 +1,4 @@
+name: karma_zmk_module
+build:
+  settings:
+    board_root: .
