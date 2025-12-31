@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/ext_power.h>
-#include <dt-bindings/zmk/pointing.h>
 
 / {
   behaviors {
@@ -43,18 +42,18 @@
         &kp Q           &kp W           &kp F           &kp P           &kp B           &kp J           &kp L           &kp U           &kp Y           &kp SQT
         &u_mt LGUI A    &u_mt LALT R    &u_mt LCTRL S   &u_mt LSHFT T   &kp G           &kp M           &u_mt RSHFT N   &u_mt RCTRL E   &u_mt RALT I    &u_mt RGUI O
         &kp Z           &kp X           &kp C           &kp D           &kp V           &kp K           &kp H           &kp COMMA       &kp DOT         &kp SLASH
-                                        &lt 4 ESC       &lt 1 SPACE     &lt 2 TAB       &lt 5 RET       &lt 3 BSPC      &lt 6 DEL
+                                        &kp ESC         &lt 1 SPACE     &kp TAB         &lt 3 RET       &lt 2 BSPC      &lt 4 DEL
       >;
     };
 
     miryoku_nav_layer {
       label = "NAV";
       // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-      // ┃           ┃           ┃           ┃           ┃           ┃   ┃   Redo    ┃   Paste   ┃   Copy    ┃    Cut    ┃   Undo    ┃
+      // ┃           ┃           ┃           ┃           ┃           ┃   ┃    REDO   ┃   PASTE   ┃    COPY   ┃    CUT    ┃   UNDO    ┃
       // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-      // ┃           ┃           ┃           ┃           ┃           ┃   ┃  CapsLock ┃  Left ←   ┃  Down ↓   ┃   Up ↑    ┃  Right →  ┃
+      // ┃           ┃           ┃           ┃           ┃           ┃   ┃    CAPS   ┃    LEFT   ┃    DOWN   ┃     UP    ┃   RIGHT   ┃
       // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-      // ┃           ┃           ┃           ┃           ┃           ┃   ┃    Ins    ┃   Home    ┃   PgDn    ┃   PgUp    ┃    End    ┃
+      // ┃           ┃           ┃           ┃           ┃           ┃   ┃    INS    ┃    HOME   ┃    PGDN   ┃    PGUP   ┃    END    ┃
       // ┗━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┛
       //                         ┃           ┃           ┃           ┃   ┃    ENT    ┃    BSP    ┃    DEL    ┃
       //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -63,25 +62,6 @@
         &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHFT       &trans          &kp CAPS        &kp LEFT        &kp DOWN        &kp UP          &kp RIGHT
         &trans          &trans          &trans          &trans          &trans          &kp INS         &kp HOME        &kp PG_DN       &kp PG_UP       &kp END
                                         &trans          &trans          &trans          &kp RET         &kp BSPC        &kp DEL
-      >;
-    };
-
-    miryoku_mouse_layer {
-      label = "MOUSE";
-      // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-      // ┃           ┃           ┃           ┃           ┃           ┃   ┃   Redo    ┃   Paste   ┃   Copy    ┃    Cut    ┃   Undo    ┃
-      // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-      // ┃   LGUI    ┃   LALT    ┃   LCTRL   ┃   LSHFT   ┃           ┃   ┃           ┃  Move ←   ┃  Move ↓   ┃  Move ↑   ┃  Move →   ┃
-      // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
-      // ┃           ┃           ┃           ┃           ┃           ┃   ┃           ┃  Scroll ← ┃  Scroll ↓ ┃  Scroll ↑ ┃  Scroll → ┃
-      // ┗━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┛
-      //                         ┃           ┃           ┃           ┃   ┃   LCLK    ┃   RCLK    ┃   MCLK    ┃
-      //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-      bindings = <
-        &trans          &trans          &trans          &trans          &trans          &kp K_REDO      &kp K_PASTE     &kp K_COPY      &kp K_CUT       &kp K_UNDO
-        &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHFT       &trans          &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT
-        &trans          &trans          &trans          &trans          &trans          &trans          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT
-                                        &trans          &trans          &trans          &mkp LCLK       &mkp RCLK       &mkp MCLK
       >;
     };
 
@@ -101,16 +81,6 @@
         &kp SEMI        &kp N4          &kp N5          &kp N6          &kp EQUAL       &trans          &kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI
         &kp GRAVE       &kp N1          &kp N2          &kp N3          &kp BSLH        &trans          &trans          &trans          &trans          &trans
                                         &kp DOT         &kp N0          &kp MINUS       &trans          &trans          &trans
-      >;
-    };
-
-    miryoku_media_layer {
-      label = "MEDIA";
-      bindings = <
-        &trans          &trans          &trans          &trans          &trans          &kp K_REDO      &kp K_PASTE     &kp K_COPY      &kp K_CUT       &kp K_UNDO
-        &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHFT       &trans          &trans          &kp C_PREV      &kp C_VOL_DN    &kp C_VOL_UP    &kp C_NEXT
-        &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
-                                        &trans          &trans          &trans          &kp C_STOP      &kp C_PP        &kp C_MUTE
       >;
     };
 
@@ -136,19 +106,19 @@
     miryoku_fun_layer {
       label = "FUN";
       // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-      // ┃    F12    ┃    F7     ┃    F8     ┃    F9     ┃   PrtSc   ┃   ┃           ┃           ┃           ┃           ┃           ┃
+      // ┃    F12    ┃    F7     ┃    F8     ┃    F9     ┃   PRTSC   ┃   ┃           ┃           ┃           ┃           ┃           ┃
       // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-      // ┃    F11    ┃    F4     ┃    F5     ┃    F6     ┃  ScrLock  ┃   ┃           ┃           ┃           ┃           ┃           ┃
+      // ┃    F11    ┃    F4     ┃    F5     ┃    F6     ┃  SCRLOCK  ┃   ┃           ┃           ┃           ┃           ┃           ┃
       // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
-      // ┃    F10    ┃    F1     ┃    F2     ┃    F3     ┃   Pause   ┃   ┃           ┃           ┃           ┃           ┃           ┃
+      // ┃    F10    ┃    F1     ┃    F2     ┃    F3     ┃   PAUSE   ┃   ┃           ┃           ┃           ┃           ┃           ┃
       // ┗━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┛
-      //                         ┃    Menu   ┃    Tab    ┃           ┃   ┃           ┃           ┃           ┃
+      //                         ┃    MENU   ┃    TAB    ┃           ┃   ┃           ┃           ┃           ┃
       //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
       bindings = <
         &kp F12         &kp F7          &kp F8          &kp F9          &kp PSCRN       &trans          &trans          &trans          &trans          &trans
         &kp F11         &kp F4          &kp F5          &kp F6          &kp SLCK        &trans          &kp LSHFT       &kp LCTRL       &kp LALT        &kp LGUI
-        &kp F10         &kp F1          &kp F2          &kp F3          &kp PAUSE       &trans          &trans          &trans          &trans          &trans
-                                        &kp K_APP       &kp TAB         &trans          &trans          &trans          &trans
+        &kp F10         &kp F1          &kp F2          &kp F3          &kp PAUSE_BREAK &trans          &trans          &trans          &trans          &trans
+                                        &trans          &kp TAB         &trans          &trans          &trans          &trans
       >;
     };
   };
