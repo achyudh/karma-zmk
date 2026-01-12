@@ -87,7 +87,7 @@
                         &none        &none        &none        &bt BT_CLR   &bootloader   &kp PLUS    &kp N7      &kp N8      &kp N9      &kp STAR
                         &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHFT    &sys_reset    &kp MINUS   &kp N4      &kp N5      &kp N6      &kp SPACE
                         &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &kp DOT     &kp N1      &kp N2      &kp N3      &kp FSLH
-                                                  &none        &none        &none         &kp BSPC    &kp N0     &kp DEL
+                                                  &none        &none        &none         &kp BSPC    &kp N0      &kp DEL
                     >;
                 };
 
