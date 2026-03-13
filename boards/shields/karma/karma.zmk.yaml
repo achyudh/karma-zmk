@@ -3,7 +3,7 @@ id: karma
 name: Karma
 type: shield
 url: https://github.com/achyudh/karma
-requires: [xiao_ble]
+requires: [xiao_ble, xiao_ble//zmk]
 features:
   - keys
 siblings:
