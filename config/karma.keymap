@@ -11,7 +11,7 @@
 #define NAV 4
 
 &mt {
-  flavor = "balanced";
+  flavor = "tap-preferred";
   quick-tap-ms = <150>;
   tapping-term-ms = <150>;
 };
