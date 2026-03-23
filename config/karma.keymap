@@ -47,29 +47,73 @@
 
     combos {
             compatible = "zmk,combos";
-            combo_esc {
-                timeout-ms = <50>;
-                key-positions = <0 1>;
-                bindings = <&kp ESC>;
-            };
+            // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓     ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+            // ┃           !           @           #           $           ┃     ┃           %           ^           &           *           ┃
+            // ┣━━━━ ~ ━━━━╋━━━━ [ ━━━━╋━━━━ { ━━━━╋━━━━ ( ━━━━╋━━━━━━━━━━━┫     ┣━━━━━━━━━━━╋━━━━ ) ━━━━╋━━━━ } ━━━━╋━━━━ ] ━━━━╋━━━━ | ━━━━┫
+            // ┃           `           -           '           =           ┃     ┃           +           "           _           \           ┃
+            // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
+            // ┃           ┃           ┃           ┃           ┃           ┃     ┃           ┃           ┃           ┃           ┃           ┃
+            // ┗━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┛
+            //                         ┃           ┃           ┃           ┃     ┃           ┃           ┃           ┃
+            //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
-            // --- Left Hand Combos ---
+            // --- Vertical Left ---
             combo_lparen {
-                timeout-ms = <50>;
+                timeout-ms = <75>;
                 key-positions = <3 13>; // P + T
                 bindings = <&kp LPAR>;
                 layers = <ABC>;
             };
             combo_lbrace {
-                timeout-ms = <50>;
+                timeout-ms = <75>;
                 key-positions = <2 12>; // F + S
                 bindings = <&kp LBRC>;
                 layers = <ABC>;
             };
             combo_lbracket {
-                timeout-ms = <50>;
+                timeout-ms = <75>;
                 key-positions = <1 11>; // W + R
                 bindings = <&kp LBKT>;
+                layers = <ABC>;
+            };
+            combo_tilde {
+                timeout-ms = <75>;
+                key-positions = <0 10>; // Q + A
+                bindings = <&kp TILDE>;
+                layers = <ABC>;
+            };
+
+            // --- Vertical Right ---
+            combo_rparen {
+                timeout-ms = <75>;
+                key-positions = <6 16>; // J + M
+                bindings = <&kp RPAR>;
+                layers = <ABC>;
+            };
+            combo_rbrace {
+                timeout-ms = <75>;
+                key-positions = <7 17>; // L + N
+                bindings = <&kp RBRC>;
+                layers = <ABC>;
+            };
+            combo_rbracket {
+                timeout-ms = <75>;
+                key-positions = <8 18>; // U + E
+                bindings = <&kp RBKT>;
+                layers = <ABC>;
+            };
+            combo_pipe {
+                timeout-ms = <75>;
+                key-positions = <9 19>; // SEMI + O
+                bindings = <&kp PIPE>;
+                layers = <ABC>;
+            };
+
+            // --- Horizontal Left ---
+            combo_grave {
+                timeout-ms = <50>;
+                key-positions = <10 11>; // A + R
+                bindings = <&kp GRAVE>;
                 layers = <ABC>;
             };
             combo_sqt {
@@ -90,24 +134,36 @@
                 bindings = <&kp EQUAL>;
                 layers = <ABC>;
             };
+            combo_excl {
+                timeout-ms = <50>;
+                key-positions = <0 1>; // Q + W
+                bindings = <&kp EXCL>;
+                layers = <ABC>;
+            };
+            combo_at {
+                timeout-ms = <50>;
+                key-positions = <1 2>; // W + F
+                bindings = <&kp AT>;
+                layers = <ABC>;
+            };
+            combo_hash {
+                timeout-ms = <50>;
+                key-positions = <2 3>; // F + P
+                bindings = <&kp HASH>;
+                layers = <ABC>;
+            };
+            combo_dllr {
+                timeout-ms = <50>;
+                key-positions = <3 4>; // P + B
+                bindings = <&kp DLLR>;
+                layers = <ABC>;
+            };
 
-            // --- Right Hand Combos ---
-            combo_rparen {
+            // --- Horizontal Right ---
+            combo_bslh {
                 timeout-ms = <50>;
-                key-positions = <6 16>; // J + M
-                bindings = <&kp RPAR>;
-                layers = <ABC>;
-            };
-            combo_rbrace {
-                timeout-ms = <50>;
-                key-positions = <7 17>; // L + N
-                bindings = <&kp RBRC>;
-                layers = <ABC>;
-            };
-            combo_rbracket {
-                timeout-ms = <50>;
-                key-positions = <8 18>; // U + E
-                bindings = <&kp RBKT>;
+                key-positions = <18 19>; // I + O
+                bindings = <&kp BSLH>;
                 layers = <ABC>;
             };
             combo_dqt {
@@ -128,7 +184,31 @@
                 bindings = <&kp PLUS>;
                 layers = <ABC>;
             };
-    };
+            combo_prcnt {
+                timeout-ms = <50>;
+                key-positions = <5 6>; // J + L
+                bindings = <&kp PRCNT>;
+                layers = <ABC>;
+            };
+            combo_caret {
+                timeout-ms = <50>;
+                key-positions = <6 7>; // L + U
+                bindings = <&kp CARET>;
+                layers = <ABC>;
+            };
+            combo_amps {
+                timeout-ms = <50>;
+                key-positions = <7 8>; // U + Y
+                bindings = <&kp AMPS>;
+                layers = <ABC>;
+            };
+            combo_star {
+                timeout-ms = <50>;
+                key-positions = <8 9>; // Y + SEMI
+                bindings = <&kp STAR>;
+                layers = <ABC>;
+            };
+     };
 
         keymap {
                 compatible = "zmk,keymap";
