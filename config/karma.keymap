@@ -52,6 +52,82 @@
                 key-positions = <0 1>;
                 bindings = <&kp ESC>;
             };
+
+            // --- Left Hand Combos ---
+            combo_lparen {
+                timeout-ms = <50>;
+                key-positions = <3 13>; // P + T
+                bindings = <&kp LPAR>;
+                layers = <ABC>;
+            };
+            combo_lbrace {
+                timeout-ms = <50>;
+                key-positions = <2 12>; // F + S
+                bindings = <&kp LBRC>;
+                layers = <ABC>;
+            };
+            combo_lbracket {
+                timeout-ms = <50>;
+                key-positions = <1 11>; // W + R
+                bindings = <&kp LBKT>;
+                layers = <ABC>;
+            };
+            combo_sqt {
+                timeout-ms = <50>;
+                key-positions = <12 13>; // S + T
+                bindings = <&kp SQT>;
+                layers = <ABC>;
+            };
+            combo_minus {
+                timeout-ms = <50>;
+                key-positions = <11 12>; // R + S
+                bindings = <&kp MINUS>;
+                layers = <ABC>;
+            };
+            combo_equal {
+                timeout-ms = <50>;
+                key-positions = <13 14>; // T + G
+                bindings = <&kp EQUAL>;
+                layers = <ABC>;
+            };
+
+            // --- Right Hand Combos ---
+            combo_rparen {
+                timeout-ms = <50>;
+                key-positions = <6 16>; // J + M
+                bindings = <&kp RPAR>;
+                layers = <ABC>;
+            };
+            combo_rbrace {
+                timeout-ms = <50>;
+                key-positions = <7 17>; // L + N
+                bindings = <&kp RBRC>;
+                layers = <ABC>;
+            };
+            combo_rbracket {
+                timeout-ms = <50>;
+                key-positions = <8 18>; // U + E
+                bindings = <&kp RBKT>;
+                layers = <ABC>;
+            };
+            combo_dqt {
+                timeout-ms = <50>;
+                key-positions = <16 17>; // N + E
+                bindings = <&kp DQT>;
+                layers = <ABC>;
+            };
+            combo_under {
+                timeout-ms = <50>;
+                key-positions = <17 18>; // E + I
+                bindings = <&kp UNDER>;
+                layers = <ABC>;
+            };
+            combo_plus {
+                timeout-ms = <50>;
+                key-positions = <15 16>; // M + N
+                bindings = <&kp PLUS>;
+                layers = <ABC>;
+            };
     };
 
         keymap {
