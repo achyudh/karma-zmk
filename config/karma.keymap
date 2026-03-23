@@ -59,7 +59,7 @@
                 abc_layer {
                     label= "ABC";
                     // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓     ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-                    // ┃     Q     ┃     W     ┃     F     ┃     P     ┃     B     ┃     ┃     J     ┃     L     ┃     U     ┃     Y     ┃     \     ┃
+                    // ┃     Q     ┃     W     ┃     F     ┃     P     ┃     B     ┃     ┃     J     ┃     L     ┃     U     ┃     Y     ┃     ;     ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
                     // ┃     A     ┃     R     ┃     S     ┃     T     ┃     G     ┃     ┃     M     ┃     N     ┃     E     ┃     I     ┃     O     ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
@@ -68,7 +68,7 @@
                     //                         ┃    ESC    ┃    SPC    ┃    TAB    ┃     ┃   BKSPC   ┃   ENTER   ┃    DEL    ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
-                        &kp Q       &kp W       &kp F       &kp P         &kp B           &kp J        &kp L       &kp U       &kp Y       &kp BSLH
+                        &kp Q       &kp W       &kp F       &kp P         &kp B           &kp J        &kp L       &kp U       &kp Y       &kp SEMI
                         &mt LGUI A  &mt LALT R  &mt LCTRL S &mt LSHFT T   &kp G           &kp M        &mt RSHFT N &mt RCTRL E &mt RALT I  &mt RGUI O
                         &kp Z       &kp X       &kp C       &kp D         &kp V           &kp K        &kp H       &kp COMMA   &kp DOT     &kp FSLH
                                                 &lt PTR ESC &lt NAV SPACE &lt SYM TAB     &lt NUM BSPC &lt MED RET &lt FUN DEL
@@ -78,19 +78,19 @@
                 sym_layer {
                     label= "SYM";
                     // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓     ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-                    // ┃           ┃           ┃           ┃           ┃           ┃     ┃     `     ┃     &     ┃     *     ┃     $     ┃     ^     ┃
+                    // ┃           ┃           ┃           ┃           ┃           ┃     ┃     `     ┃     &     ┃     *     ┃     $     ┃     \     ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
                     // ┃   LSUPR   ┃   LMETA   ┃   LCTRL   ┃   LSHFT   ┃           ┃     ┃     =     ┃     (     ┃     {     ┃     [     ┃     '     ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
-                    // ┃           ┃           ┃           ┃           ┃           ┃     ┃     +     ┃     !     ┃     @     ┃     #     ┃     %     ┃
+                    // ┃           ┃           ┃           ┃           ┃           ┃     ┃     ^     ┃     !     ┃     @     ┃     #     ┃     %     ┃
                     // ┗━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┛
-                    //                         ┃           ┃           ┃           ┃     ┃     ;     ┃     -     ┃     _     ┃
+                    //                         ┃           ┃           ┃           ┃     ┃     +     ┃     -     ┃     _     ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                      bindings = <
-                        &none       &none       &none       &none       &none             &kp GRAVE   &kp AMPS    &kp STAR    &kp DLLR    &kp CARET
+                        &none       &none       &none       &none       &none             &kp GRAVE   &kp AMPS    &kp STAR    &kp DLLR    &kp BSLH
                         &kp LGUI    &kp LALT    &kp LCTRL   &kp LSHFT   &none             &kp EQUAL   &sym_par    &sym_brc    &sym_bkt    &kp SQT
-                        &none       &none       &none       &none       &none             &kp PLUS    &kp EXCL    &kp AT      &kp HASH    &kp PRCNT
-                                                &none       &none       &none             &kp SEMI    &kp MINUS   &kp UNDER
+                        &none       &none       &none       &none       &none             &kp CARET   &kp EXCL    &kp AT      &kp HASH    &kp PRCNT
+                                                &none       &none       &none             &kp PLUS    &kp MINUS   &kp UNDER
                     >;
                 };
 
