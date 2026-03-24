@@ -23,6 +23,14 @@
 
 / {
     behaviors {
+        ht_combo: ht_combo {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <150>;
+            quick-tap-ms = <150>;
+            bindings = <&kp>, <&kp>;
+        };
         sym_brc: sym_brc_morph {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -111,19 +119,19 @@
             combo_grave {
                 timeout-ms = <50>;
                 key-positions = <10 11>; // A + R
-                bindings = <&kp GRAVE>;
+                bindings = <&ht_combo LG(LALT) GRAVE>;
                 layers = <ABC>;
             };
             combo_sqt {
                 timeout-ms = <50>;
                 key-positions = <12 13>; // S + T
-                bindings = <&kp SQT>;
+                bindings = <&ht_combo LC(LSHFT) SQT>;
                 layers = <ABC>;
             };
             combo_minus {
                 timeout-ms = <50>;
                 key-positions = <11 12>; // R + S
-                bindings = <&kp MINUS>;
+                bindings = <&ht_combo LA(LCTRL) MINUS>;
                 layers = <ABC>;
             };
             combo_equal {
@@ -161,19 +169,19 @@
             combo_bslh {
                 timeout-ms = <50>;
                 key-positions = <18 19>; // I + O
-                bindings = <&kp BSLH>;
+                bindings = <&ht_combo RG(RALT) BSLH>;
                 layers = <ABC>;
             };
             combo_dqt {
                 timeout-ms = <50>;
                 key-positions = <16 17>; // N + E
-                bindings = <&kp DQT>;
+                bindings = <&ht_combo RC(RSHFT) DQT>;
                 layers = <ABC>;
             };
             combo_under {
                 timeout-ms = <50>;
                 key-positions = <17 18>; // E + I
-                bindings = <&kp UNDER>;
+                bindings = <&ht_combo RC(RALT) UNDER>;
                 layers = <ABC>;
             };
             combo_plus {
