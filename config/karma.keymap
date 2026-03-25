@@ -58,8 +58,8 @@
             compatible = "zmk,combos";
             // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓     ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
             // ┃           !           @           #           $           ┃     ┃           %           ^           &           *           ┃
-            // ┣━━━━ ~ ━━━━╋━━━━ [ ━━━━╋━━━━ { ━━━━╋━━━━ ( ━━━━╋━━━━━━━━━━━┫     ┣━━━━━━━━━━━╋━━━━ ) ━━━━╋━━━━ } ━━━━╋━━━━ ] ━━━━╋━━━━ | ━━━━┫
-            // ┃           `           -           '           =           ┃     ┃           +           "           _           \           ┃
+            // ┣━━━━━━━━━━━╋━━━━ [ ━━━━╋━━━━ { ━━━━╋━━━━ ( ━━━━╋━━━━ ` ━━━━┫     ┣━━━━ ~ ━━━━╋━━━━ ) ━━━━╋━━━━ } ━━━━╋━━━━ ] ━━━━╋━━━━━━━━━━━┫
+            // ┃           \           -           '           =           ┃     ┃           +           "           _           |           ┃
             // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
             // ┃           ┃           ┃           ┃           ┃           ┃     ┃           ┃           ┃           ┃           ┃           ┃
             // ┗━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -85,10 +85,10 @@
                 bindings = <&kp LBKT>;
                 layers = <ABC>;
             };
-            combo_tilde {
+            combo_grave {
                 timeout-ms = <COMBO_TIMEOUT_SLOW>;
-                key-positions = <0 10>; // Q + A
-                bindings = <&kp TILDE>;
+                key-positions = <4 14>; // B + G
+                bindings = <&kp GRAVE>;
                 layers = <ABC>;
             };
 
@@ -111,18 +111,18 @@
                 bindings = <&kp RBKT>;
                 layers = <ABC>;
             };
-            combo_pipe {
+            combo_tilde {
                 timeout-ms = <COMBO_TIMEOUT_SLOW>;
-                key-positions = <9 19>; // SEMI + O
-                bindings = <&kp PIPE>;
+                key-positions = <5 15>; // J + M
+                bindings = <&kp TILDE>;
                 layers = <ABC>;
             };
 
             // --- Horizontal Left ---
-            combo_grave {
+            combo_bslh {
                 timeout-ms = <COMBO_TIMEOUT_SLOW>;
                 key-positions = <10 11>; // A + R
-                bindings = <&ht_combo LG(LALT) GRAVE>;
+                bindings = <&ht_combo LG(LALT) BSLH>;
                 layers = <ABC>;
             };
             combo_sqt {
@@ -169,10 +169,10 @@
             };
 
             // --- Horizontal Right ---
-            combo_bslh {
+            combo_pipe {
                 timeout-ms = <COMBO_TIMEOUT_SLOW>;
                 key-positions = <18 19>; // I + O
-                bindings = <&ht_combo RG(RALT) BSLH>;
+                bindings = <&ht_combo RG(RALT) PIPE>;
                 layers = <ABC>;
             };
             combo_dqt {
