@@ -262,18 +262,18 @@
                 num_layer {
                     label= "NUM";
                     // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓     ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-                    // ┃           ┃           ┃           ┃  BT CLR   ┃  BOOTLDR  ┃     ┃     +     ┃     7     ┃     8     ┃     9     ┃     *     ┃
+                    // ┃           ┃           ┃           ┃  BT CLR   ┃  BOOTLDR  ┃     ┃     +     ┃     7     ┃     8     ┃     9     ┃     .     ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
                     // ┃   LSUPR   ┃   LMETA   ┃   LCTRL   ┃   LSHFT   ┃  SYS RST  ┃     ┃     -     ┃     4     ┃     5     ┃     6     ┃     0     ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
-                    // ┃    BT0    ┃    BT1    ┃    BT2    ┃    BT3    ┃    BT4    ┃     ┃     .     ┃     1     ┃     2     ┃     3     ┃     /     ┃
+                    // ┃    BT0    ┃    BT1    ┃    BT2    ┃    BT3    ┃    BT4    ┃     ┃     *     ┃     1     ┃     2     ┃     3     ┃     /     ┃
                     // ┗━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┛
                     //                         ┃           ┃           ┃           ┃     ┃   BKSPC   ┃    RET    ┃    DEL    ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
-                        &none        &none        &none        &bt BT_CLR   &bootloader   &kp PLUS    &kp N7      &kp N8      &kp N9      &kp STAR
+                        &none        &none        &none        &bt BT_CLR   &bootloader   &kp PLUS    &kp N7      &kp N8      &kp N9      &kp DOT
                         &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHFT    &sys_reset    &kp MINUS   &kp N4      &kp N5      &kp N6      &kp N0
-                        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &kp DOT     &kp N1      &kp N2      &kp N3      &kp FSLH
+                        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &kp STAR    &kp N1      &kp N2      &kp N3      &kp FSLH
                                                   &none        &none        &none         &kp BSPC    &kp RET     &kp DEL
                     >;
                 };
