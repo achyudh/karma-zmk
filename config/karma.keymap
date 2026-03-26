@@ -5,11 +5,10 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define ABC 0
-#define SYM 1
-#define NUM 2
-#define NAV 3
-#define MED 4
-#define FUN 5
+#define NUM 1
+#define NAV 2
+#define MED 3
+#define FUN 4
 
 #define COMBO_TIMEOUT_FAST 30
 #define COMBO_TIMEOUT_SLOW 60
@@ -236,45 +235,26 @@
                         &kp Q       &kp W       &kp F       &kp P         &kp B           &kp J        &kp L       &kp U       &kp Y       &kp SEMI
                         &mt LGUI A  &mt LALT R  &mt LCTRL S &mt LSHFT T   &kp G           &kp M        &mt RSHFT N &mt RCTRL E &mt RALT I  &mt RGUI O
                         &kp Z       &kp X       &kp C       &kp D         &kp V           &kp K        &kp H       &kp COMMA   &kp DOT     &kp FSLH
-                                                &lt FUN ESC &lt NAV SPACE &lt NUM TAB     &lt SYM BSPC &lt MED RET &kp DEL
-                    >;
-                };
-
-                sym_layer {
-                    label= "SYM";
-                    // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓     ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-                    // ┃     `     ┃     &     ┃     *     ┃     $     ┃     \     ┃     ┃  BOOTLDR  ┃           ┃           ┃           ┃           ┃
-                    // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-                    // ┃     (     ┃     {     ┃     [     ┃     '     ┃     =     ┃     ┃  SYS RST  ┃   RSHFT   ┃   RCTRL   ┃   RALT    ┃   RGUI    ┃
-                    // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
-                    // ┃     ^     ┃     !     ┃     @     ┃     #     ┃     %     ┃     ┃           ┃           ┃           ┃           ┃           ┃
-                    // ┗━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┛
-                    //                         ┃     +     ┃     -     ┃     _     ┃     ┃           ┃           ┃           ┃
-                    //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-                     bindings = <
-                        &kp GRAVE   &kp AMPS    &kp STAR    &kp DLLR    &kp BSLH          &bootloader &none       &none       &none       &none
-                        &sym_par    &sym_brc    &sym_bkt    &kp SQT     &kp EQUAL         &sys_reset  &kp RSHFT   &kp RCTRL   &kp RALT    &kp RGUI
-                        &kp CARET   &kp EXCL    &kp AT      &kp HASH    &kp PRCNT         &none       &none       &none       &none       &none
-                                                &kp PLUS    &kp MINUS   &kp UNDER         &none       &none       &none
+                                                &kp ESC     &lt NAV SPACE &lt MED TAB     &lt FUN BSPC &lt NUM RET &kp DEL
                     >;
                 };
 
                 num_layer {
                     label= "NUM";
                     // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓     ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-                    // ┃           ┃           ┃           ┃  BT CLR   ┃  BOOTLDR  ┃     ┃     +     ┃     7     ┃     8     ┃     9     ┃     .     ┃
+                    // ┃     .     ┃     7     ┃     8     ┃     9     ┃     +     ┃     ┃           ┃           ┃           ┃           ┃           ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-                    // ┃   LSUPR   ┃   LMETA   ┃   LCTRL   ┃   LSHFT   ┃  SYS RST  ┃     ┃     -     ┃     4     ┃     5     ┃     6     ┃     0     ┃
+                    // ┃     0     ┃     4     ┃     5     ┃     6     ┃     -     ┃     ┃           ┃   RSHFT   ┃   RCTRL   ┃   RALT    ┃   RGUI    ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
-                    // ┃    BT0    ┃    BT1    ┃    BT2    ┃    BT3    ┃    BT4    ┃     ┃     *     ┃     1     ┃     2     ┃     3     ┃     /     ┃
+                    // ┃     /     ┃     1     ┃     2     ┃     3     ┃     *     ┃     ┃           ┃           ┃           ┃           ┃           ┃
                     // ┗━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┛
-                    //                         ┃           ┃           ┃           ┃     ┃   BKSPC   ┃    RET    ┃    DEL    ┃
+                    //                         ┃    ESC    ┃    SPC    ┃    TAB    ┃     ┃           ┃           ┃           ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
-                        &none        &none        &none        &bt BT_CLR   &bootloader   &kp PLUS    &kp N7      &kp N8      &kp N9      &kp DOT
-                        &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHFT    &sys_reset    &kp MINUS   &kp N4      &kp N5      &kp N6      &kp N0
-                        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &kp STAR    &kp N1      &kp N2      &kp N3      &kp FSLH
-                                                  &none        &none        &none         &kp BSPC    &kp RET     &kp DEL
+                        &kp DOT     &kp N7      &kp N8      &kp N9      &kp PLUS          &none        &none        &none        &none        &none
+                        &kp N0      &kp N4      &kp N5      &kp N6      &kp MINUS         &none        &kp RSHFT    &kp RCTRL    &kp RALT     &kp RGUI
+                        &kp FSLH    &kp N1      &kp N2      &kp N3      &kp STAR          &none        &none        &none        &none        &none
+                                                &kp ESC     &kp SPACE   &kp TAB           &none        &none        &none
                     >;
                 };
 
@@ -300,38 +280,38 @@
                 med_layer {
                     label= "MED";
                     // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓     ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-                    // ┃    ESC    ┃   BR DN   ┃   PSCRN   ┃   BR UP   ┃           ┃     ┃           ┃           ┃           ┃           ┃           ┃
+                    // ┃           ┃           ┃           ┃  BT CLR   ┃  BOOTLDR  ┃     ┃  BR MIN   ┃   BR DN   ┃   PSCRN   ┃   BR UP   ┃  BR MAX   ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-                    // ┃    RWD    ┃    PRV    ┃    P/P    ┃    NXT    ┃    FFD    ┃     ┃           ┃   RSHFT   ┃   RCTRL   ┃   RALT    ┃   RGUI    ┃
+                    // ┃   LSUPR   ┃   LMETA   ┃   LCTRL   ┃   LSHFT   ┃  SYS RST  ┃     ┃    RWD    ┃    PRV    ┃    P/P    ┃    NXT    ┃    FFD    ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
-                    // ┃           ┃   VL DN   ┃    MUT    ┃   VL UP   ┃           ┃     ┃           ┃           ┃           ┃           ┃           ┃
+                    // ┃    BT0    ┃    BT1    ┃    BT2    ┃    BT3    ┃    BT4    ┃     ┃           ┃   VL DN   ┃    MUT    ┃   VL UP   ┃           ┃
                     // ┗━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┛
-                    //                         ┃           ┃           ┃           ┃     ┃           ┃           ┃           ┃
+                    //                         ┃           ┃           ┃           ┃     ┃   BKSPC   ┃   ENTER   ┃    DEL    ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
-                        &kp ESC       &kp C_BRI_DN &kp PSCRN  &kp C_BRI_UP &none          &none       &none       &none       &none       &none
-                        &kp C_RW      &kp C_PREV   &kp C_PP   &kp C_NEXT   &kp C_FF       &none       &kp RSHFT   &kp RCTRL   &kp RALT    &kp RGUI
-                        &none         &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &none          &none       &none       &none       &none       &none
-                                                   &kp ESC    &kp SPACE    &kp TAB        &none       &none       &none
+                        &none        &none        &none        &bt BT_CLR   &bootloader   &kp C_BRI_MIN &kp C_BRI_DN &kp PSCRN  &kp C_BRI_UP &kp C_BRI_MAX
+                        &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHFT    &sys_reset    &kp C_RW    &kp C_PREV   &kp C_PP   &kp C_NEXT   &kp C_FF
+                        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &none       &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &none
+                                                  &none        &none        &none         &kp BSPC    &kp RET      &kp DEL
                     >;
                 };
 
                 fun_layer {
                     label= "FUN";
                     // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓     ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-                    // ┃           ┃           ┃           ┃           ┃           ┃     ┃           ┃    F07    ┃    F08    ┃    F09    ┃    F12    ┃
+                    // ┃    F12    ┃    F07    ┃    F08    ┃    F09    ┃           ┃     ┃  BOOTLDR  ┃           ┃           ┃           ┃           ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-                    // ┃   LSUPR   ┃   LMETA   ┃   LCTRL   ┃   LSHFT   ┃           ┃     ┃           ┃    F04    ┃    F05    ┃    F06    ┃    F11    ┃
+                    // ┃    F11    ┃    F04    ┃    F05    ┃    F06    ┃           ┃     ┃  SYS RST  ┃   RSHFT   ┃   RCTRL   ┃   RALT    ┃   RGUI    ┃
                     // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
-                    // ┃           ┃           ┃           ┃           ┃           ┃     ┃           ┃    F01    ┃    F02    ┃    F03    ┃    F10    ┃
+                    // ┃    F10    ┃    F01    ┃    F02    ┃    F03    ┃           ┃     ┃           ┃           ┃           ┃           ┃           ┃
                     // ┗━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┛
-                    //                         ┃           ┃           ┃           ┃     ┃    ESC    ┃    SPC    ┃    TAB    ┃
+                    //                         ┃    ESC    ┃    SPC    ┃    TAB    ┃     ┃           ┃           ┃           ┃
                     //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
                     bindings = <
-                        &none         &none        &none      &none        &none          &none       &kp F7     &kp F8      &kp F9      &kp F12
-                        &kp LGUI      &kp LALT     &kp LCTRL  &kp LSHFT    &none          &none       &kp F4     &kp F5      &kp F6      &kp F11
-                        &none         &none        &none      &none        &none          &none       &kp F1     &kp F2      &kp F3      &kp F10
-                                                   &none      &none        &none          &kp ESC     &kp SPACE  &kp TAB
+                        &kp F12       &kp F7       &kp F8     &kp F9       &none          &bootloader  &none        &none        &none        &none
+                        &kp F11       &kp F4       &kp F5     &kp F6       &none          &sys_reset   &kp RSHFT    &kp RCTRL    &kp RALT     &kp RGUI
+                        &kp F10       &kp F1       &kp F2     &kp F3       &none          &none        &none        &none        &none        &none
+                                                   &kp ESC    &kp SPACE    &kp TAB        &none        &none        &none
                     >;
                 };
         };
