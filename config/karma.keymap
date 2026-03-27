@@ -10,8 +10,8 @@
 #define MED 3
 #define FUN 4
 
-#define COMBO_TIMEOUT_FAST 30
-#define COMBO_TIMEOUT_SLOW 60
+#define COMBO_TIMEOUT_FAST 25
+#define COMBO_TIMEOUT_SLOW 50
 
 &mt {
   flavor = "tap-preferred";
