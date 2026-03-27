@@ -179,7 +179,7 @@
                 layers = <ABC>;
             };
             combo_lparen {
-                timeout-ms = <COMBO_TIMEOUT_SLOW>;
+                timeout-ms = <COMBO_TIMEOUT_FAST>;
                 key-positions = <22 23>; // C + D
                 bindings = <&kp LPAR>;
                 layers = <ABC>;
