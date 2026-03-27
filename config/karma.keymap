@@ -57,91 +57,15 @@
             compatible = "zmk,combos";
             // ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓     ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
             // ┃           !           @           #           $           ┃     ┃           %           ^           &           *           ┃
-            // ┣━━━━━━━━━━━╋━━━━ [ ━━━━╋━━━━ { ━━━━╋━━━━ ( ━━━━╋━━━━ ` ━━━━┫     ┣━━━━ ~ ━━━━╋━━━━ ) ━━━━╋━━━━ } ━━━━╋━━━━ ] ━━━━╋━━━━━━━━━━━┫
-            // ┃           \           -           '           =           ┃     ┃           +           "           _           |           ┃
-            // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┃
-            // ┃           ┃           ┃           ┃           ┃           ┃     ┃           ┃           ┃           ┃           ┃           ┃
+            // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+            // ┃           `           -           '           =           ┃     ┃           +           "           _           ~           ┃
+            // ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+            // ┃           [           {           (           \           ┃     ┃           |           )           }           ]           ┃
             // ┗━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫     ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┛
             //                         ┃           ┃           ┃           ┃     ┃           ┃           ┃           ┃
             //                         ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
-            // --- Vertical Left ---
-            combo_lparen {
-                timeout-ms = <COMBO_TIMEOUT_SLOW>;
-                key-positions = <3 13>; // P + T
-                bindings = <&kp LPAR>;
-                layers = <ABC>;
-            };
-            combo_lbrace {
-                timeout-ms = <COMBO_TIMEOUT_SLOW>;
-                key-positions = <2 12>; // F + S
-                bindings = <&kp LBRC>;
-                layers = <ABC>;
-            };
-            combo_lbracket {
-                timeout-ms = <COMBO_TIMEOUT_SLOW>;
-                key-positions = <1 11>; // W + R
-                bindings = <&kp LBKT>;
-                layers = <ABC>;
-            };
-            combo_grave {
-                timeout-ms = <COMBO_TIMEOUT_SLOW>;
-                key-positions = <4 14>; // B + G
-                bindings = <&kp GRAVE>;
-                layers = <ABC>;
-            };
-
-            // --- Vertical Right ---
-            combo_rparen {
-                timeout-ms = <COMBO_TIMEOUT_SLOW>;
-                key-positions = <6 16>; // J + M
-                bindings = <&kp RPAR>;
-                layers = <ABC>;
-            };
-            combo_rbrace {
-                timeout-ms = <COMBO_TIMEOUT_SLOW>;
-                key-positions = <7 17>; // L + N
-                bindings = <&kp RBRC>;
-                layers = <ABC>;
-            };
-            combo_rbracket {
-                timeout-ms = <COMBO_TIMEOUT_SLOW>;
-                key-positions = <8 18>; // U + E
-                bindings = <&kp RBKT>;
-                layers = <ABC>;
-            };
-            combo_tilde {
-                timeout-ms = <COMBO_TIMEOUT_SLOW>;
-                key-positions = <5 15>; // J + M
-                bindings = <&kp TILDE>;
-                layers = <ABC>;
-            };
-
-            // --- Horizontal Left ---
-            combo_bslh {
-                timeout-ms = <COMBO_TIMEOUT_SLOW>;
-                key-positions = <10 11>; // A + R
-                bindings = <&ht_combo LG(LALT) BSLH>;
-                layers = <ABC>;
-            };
-            combo_sqt {
-                timeout-ms = <COMBO_TIMEOUT_FAST>;
-                key-positions = <12 13>; // S + T
-                bindings = <&ht_combo LC(LSHFT) SQT>;
-                layers = <ABC>;
-            };
-            combo_minus {
-                timeout-ms = <COMBO_TIMEOUT_FAST>;
-                key-positions = <11 12>; // R + S
-                bindings = <&ht_combo LA(LCTRL) MINUS>;
-                layers = <ABC>;
-            };
-            combo_equal {
-                timeout-ms = <COMBO_TIMEOUT_SLOW>;
-                key-positions = <13 14>; // T + G
-                bindings = <&kp EQUAL>;
-                layers = <ABC>;
-            };
+            // --- Top Row ---
             combo_excl {
                 timeout-ms = <COMBO_TIMEOUT_SLOW>;
                 key-positions = <0 1>; // Q + W
@@ -166,32 +90,6 @@
                 bindings = <&kp DLLR>;
                 layers = <ABC>;
             };
-
-            // --- Horizontal Right ---
-            combo_pipe {
-                timeout-ms = <COMBO_TIMEOUT_SLOW>;
-                key-positions = <18 19>; // I + O
-                bindings = <&ht_combo RG(RALT) PIPE>;
-                layers = <ABC>;
-            };
-            combo_dqt {
-                timeout-ms = <COMBO_TIMEOUT_FAST>;
-                key-positions = <16 17>; // N + E
-                bindings = <&ht_combo RC(RSHFT) DQT>;
-                layers = <ABC>;
-            };
-            combo_under {
-                timeout-ms = <COMBO_TIMEOUT_FAST>;
-                key-positions = <17 18>; // E + I
-                bindings = <&ht_combo RC(RALT) UNDER>;
-                layers = <ABC>;
-            };
-            combo_plus {
-                timeout-ms = <COMBO_TIMEOUT_SLOW>;
-                key-positions = <15 16>; // M + N
-                bindings = <&kp PLUS>;
-                layers = <ABC>;
-            };
             combo_prcnt {
                 timeout-ms = <COMBO_TIMEOUT_SLOW>;
                 key-positions = <5 6>; // J + L
@@ -212,8 +110,108 @@
             };
             combo_star {
                 timeout-ms = <COMBO_TIMEOUT_SLOW>;
-                key-positions = <8 9>; // Y + SEMI
+                key-positions = <8 9>; // Y + ;
                 bindings = <&kp STAR>;
+                layers = <ABC>;
+            };
+
+            // --- Home Row ---
+            combo_grave {
+                timeout-ms = <COMBO_TIMEOUT_SLOW>;
+                key-positions = <10 11>; // A + R
+                bindings = <&ht_combo LG(LALT) GRAVE>;
+                layers = <ABC>;
+            };
+            combo_minus {
+                timeout-ms = <COMBO_TIMEOUT_FAST>;
+                key-positions = <11 12>; // R + S
+                bindings = <&ht_combo LA(LCTRL) MINUS>;
+                layers = <ABC>;
+            };
+            combo_sqt {
+                timeout-ms = <COMBO_TIMEOUT_FAST>;
+                key-positions = <12 13>; // S + T
+                bindings = <&ht_combo LC(LSHFT) SQT>;
+                layers = <ABC>;
+            };
+            combo_equal {
+                timeout-ms = <COMBO_TIMEOUT_SLOW>;
+                key-positions = <13 14>; // T + G
+                bindings = <&kp EQUAL>;
+                layers = <ABC>;
+            };
+            combo_plus {
+                timeout-ms = <COMBO_TIMEOUT_SLOW>;
+                key-positions = <15 16>; // M + N
+                bindings = <&kp PLUS>;
+                layers = <ABC>;
+            };
+            combo_dqt {
+                timeout-ms = <COMBO_TIMEOUT_FAST>;
+                key-positions = <16 17>; // N + E
+                bindings = <&ht_combo RC(RSHFT) DQT>;
+                layers = <ABC>;
+            };
+            combo_under {
+                timeout-ms = <COMBO_TIMEOUT_FAST>;
+                key-positions = <17 18>; // E + I
+                bindings = <&ht_combo RC(RALT) UNDER>;
+                layers = <ABC>;
+            };
+            combo_tilde {
+                timeout-ms = <COMBO_TIMEOUT_SLOW>;
+                key-positions = <18 19>; // I + O
+                bindings = <&ht_combo RG(RALT) TILDE>;
+                layers = <ABC>;
+            };
+
+            // --- Bottom Row ---
+            combo_lbracket {
+                timeout-ms = <COMBO_TIMEOUT_SLOW>;
+                key-positions = <20 21>; // Z + X
+                bindings = <&kp LBKT>;
+                layers = <ABC>;
+            };
+            combo_lbrace {
+                timeout-ms = <COMBO_TIMEOUT_SLOW>;
+                key-positions = <21 22>; // X + C
+                bindings = <&kp LBRC>;
+                layers = <ABC>;
+            };
+            combo_lparen {
+                timeout-ms = <COMBO_TIMEOUT_SLOW>;
+                key-positions = <22 23>; // C + D
+                bindings = <&kp LPAR>;
+                layers = <ABC>;
+            };
+            combo_bslh {
+                timeout-ms = <COMBO_TIMEOUT_SLOW>;
+                key-positions = <23 24>; // D + V
+                bindings = <&kp BSLH>;
+                layers = <ABC>;
+            };
+            combo_pipe {
+                timeout-ms = <COMBO_TIMEOUT_SLOW>;
+                key-positions = <25 26>; // K + H
+                bindings = <&kp PIPE>;
+                layers = <ABC>;
+            };
+            combo_rparen {
+                timeout-ms = <COMBO_TIMEOUT_SLOW>;
+                key-positions = <26 27>; // H + ,
+                bindings = <&kp RPAR>;
+                layers = <ABC>;
+            };
+            combo_rbrace {
+                timeout-ms = <COMBO_TIMEOUT_SLOW>;
+                key-positions = <27 28>; // , + .
+                bindings = <&kp RBRC>;
+                layers = <ABC>;
+            };
+            combo_rbracket {
+                timeout-ms = <COMBO_TIMEOUT_SLOW>;
+                key-positions = <28 29>; // . + /
+                bindings = <&kp RBKT>;
                 layers = <ABC>;
             };
      };
