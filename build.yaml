@@ -13,9 +13,20 @@
 #
 ---
 include:
+  # --- Split Setup ---
   - board: xiao_ble//zmk
     shield: karma_left
   - board: xiao_ble//zmk
     shield: karma_right
+
+  # --- Dongle Setup ---
+  - board: xiao_ble//zmk
+    shield: karma_dongle
+  - board: xiao_ble//zmk
+    shield: karma_left
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    artifact-name: karma_left_peripheral-xiao_ble__zmk-zmk
+
+  # --- Reset Firmware ---
   - board: xiao_ble//zmk
     shield: settings_reset

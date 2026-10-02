@@ -9,3 +9,4 @@ features:
 siblings:
   - karma_left
   - karma_right
+  - karma_dongle

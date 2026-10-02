@@ -1,0 +1,24 @@
+/*
+ * Copyright (c) 2026 Achyudh Ram
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "karma.dtsi"
+
+/ {
+    chosen {
+        zmk,kscan = &mock_kscan;
+        zmk,matrix_transform = &default_transform;
+    };
+
+    mock_kscan: mock_kscan_0 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
+};
+
+&kscan0 {
+    status = "disabled";
+};

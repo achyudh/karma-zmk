@@ -6,3 +6,6 @@ config SHIELD_KARMA_LEFT
 
 config SHIELD_KARMA_RIGHT
     def_bool $(shields_list_contains,karma_right)
+
+config SHIELD_KARMA_DONGLE
+    def_bool $(shields_list_contains,karma_dongle)
