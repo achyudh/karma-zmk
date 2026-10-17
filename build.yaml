@@ -22,10 +22,9 @@ include:
   # --- Dongle Setup ---
   - board: xiao_ble//zmk
     shield: karma_dongle
-  - board: nrf52840dongle/nrf52840
+  - board: nrf52840dongle//zmk
     shield: karma_dongle
     artifact-name: karma_dongle_holyiot
-    cmake-args: -DCONFIG_BOARD_ENABLE_DCDC=n -DCONFIG_BOARD_ENABLE_DCDC_HV=n -DCONFIG_BUILD_OUTPUT_UF2=n -DCONFIG_BUILD_OUTPUT_HEX=y
   - board: xiao_ble//zmk
     shield: karma_left
     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
