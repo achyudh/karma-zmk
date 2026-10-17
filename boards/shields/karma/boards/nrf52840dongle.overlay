@@ -1,0 +1,24 @@
+/*
+ * Copyright (c) 2026 Achyudh Ram
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <zephyr/dt-bindings/regulator/nrf5x.h>
+
+/*
+ * Holyiot-22046 runs in High Voltage (VDDH = 5V USB) mode without external DC/DC inductors.
+ *
+ * In Zephyr:
+ * - &reg0 represents the High Voltage DC/DC converter (DCDCEN.VDDH). Disabling it keeps
+ *   REG0 in its hardware-default LDO mode without triggering a DT binding validation error
+ *   (nordic,nrf52x-regulator-hv does not support 'regulator-initial-mode').
+ * - &reg1 represents the internal core regulator, set explicitly to LDO mode.
+ */
+&reg0 {
+    status = "disabled";
+};
+
+&reg1 {
+    status = "okay";
+    regulator-initial-mode = <NRF5X_REG_MODE_LDO>;
+};
